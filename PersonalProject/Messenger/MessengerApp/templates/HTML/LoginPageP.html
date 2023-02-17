@@ -1,0 +1,31 @@
+{% load static %}
+
+{% include "HTML/Header.html" %}
+{% include "HTML/Slider.html" %}
+
+
+<div class="Login-container" >
+
+<img src="{% static 'MediaResources/LI1.jpg'%}" >
+
+<div class="Login-form-container" >
+    <form  method="POST">
+
+        <br>
+        {% csrf_token %}
+    
+        {{LoginForm}}
+        <a href="/Registration" class="">Registration</a>
+        <br>
+        <br>
+
+        <button name="Submit">Submit</button>
+    
+    
+    </form>
+</div>
+
+
+
+
+@endsection
